@@ -1,1 +1,1 @@
-# curso-injtermedio-python
+# curso-intermedio-python
