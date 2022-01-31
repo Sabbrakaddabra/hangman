@@ -13,16 +13,17 @@ forbidden = ["_", "-", "\\", "/", "|", "+", "*", "{", "}", "[", "]", "=", "0", "
 
 
 
-menu = """██╗░░██╗░█████╗░███╗░░██╗░██████╗░███╗░░░███╗░█████╗░███╗░░██╗
-██║░░██║██╔══██╗████╗░██║██╔════╝░████╗░████║██╔══██╗████╗░██║
-███████║███████║██╔██╗██║██║░░██╗░██╔████╔██║███████║██╔██╗██║
-██╔══██║██╔══██║██║╚████║██║░░╚██╗██║╚██╔╝██║██╔══██║██║╚████║
-██║░░██║██║░░██║██║░╚███║╚██████╔╝██║░╚═╝░██║██║░░██║██║░╚███║
-╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝
+menu = """
+    ██╗░░██╗░█████╗░███╗░░██╗░██████╗░███╗░░░███╗░█████╗░███╗░░██╗
+    ██║░░██║██╔══██╗████╗░██║██╔════╝░████╗░████║██╔══██╗████╗░██║
+    ███████║███████║██╔██╗██║██║░░██╗░██╔████╔██║███████║██╔██╗██║
+    ██╔══██║██╔══██║██║╚████║██║░░╚██╗██║╚██╔╝██║██╔══██║██║╚████║
+    ██║░░██║██║░░██║██║░╚███║╚██████╔╝██║░╚═╝░██║██║░░██║██║░╚███║
+    ╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝░╚═════╝░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝
 
-_______________________________________________________________
+    _______________________________________________________________
 
----------------------------------------------------------------                                                    
+    ---------------------------------------------------------------                                                    
                          |/|
                          |/| /¯)
                          |/|/\/
@@ -42,13 +43,13 @@ _______________________________________________________________
                      \ \     / /
                       \ `---' /
                        `-----'  
-______________________________________________________________                       
-|     BIENVENIDO AL JUEGO DEL AHORACADO Ó HANGMAN GAME        |
---------------------------------------------------------------
-Para comenzar presiona (1) y luego (Enter)
-Para salir presiona (Ctrl + C)
-______________________________________________________________
-""" 
+    ______________________________________________________________                       
+    |     BIENVENIDO AL JUEGO DEL AHORACADO Ó HANGMAN GAME        |
+    --------------------------------------------------------------
+    Para comenzar presiona (1) y luego (Enter)
+    Para salir presiona (Ctrl + C)
+    ______________________________________________________________
+    """ 
 
 def normalize(s): 
         replacements = (
@@ -88,21 +89,6 @@ def run():
         os.system("cls") 
         print("Recuerda: Tienes " + str(lifes) +" vidas. Ten cuidado.")
 
-while True:
-    try:
-        opcion = input(menu)
-        if int(opcion) == 1:
-            run()   
-        else: input("Debes ingresar el número 1 para jugar. Presiona la tecla Enter para reintentar.")
-        assert len(str(opcion)) == 1, input("¡No puedes ingresar varias letras o números!, Presiona la tecla Enter para reintentar.")
-    except AssertionError as a:
-        print(a) 
-    except ValueError:
-        input("No se aceptan letras, ingresa el número 1 para jugar. Presiona la tecla Enter para reintentar.")   
-        
-
-
-
     print("""
          ___________.._______
         | .__________))______|
@@ -122,15 +108,15 @@ while True:
         | |          || ||
         | |          || ||
         | |         / | | \.
--------------------------
-|  -------------------- |
-| |                   | |
-: :                   : :  
--------------------------
-|  ¡ADIVINA LA PALABRA!  |
-""")
+    -------------------------
+    |  -------------------- |
+    | |                   | |
+    : :                   : :  
+    -------------------------
+    |  ¡ADIVINA LA PALABRA!  |
+    """)
 
-for element in chosen_word_list_underscores:
+    for element in chosen_word_list_underscores:
         print(element + " ", end="")
         print("\n")
 
@@ -153,15 +139,15 @@ for element in chosen_word_list_underscores:
                 os.system("cls")
 
                 lose = input("""
-`7MMMMMMq.`7MMMMMYMM  `7MMMMMMMq.  `7MMMMMYb.`7MMF' .MMMMbgd MMP""MM""YMM `7MMMMMYMM  
-  MM   `MM. MM    `7    MM   `MM.   MM    `Yb. MM  ,MI    "Y P'   MM   `7   MM    `7  
-  MM   ,M9  MM   d      MM   ,M9    MM     `Mb MM  `MMb.          MM        MM   d    
-  MMmmdM9   MMmmMM      MMmmdM9     MM      MM MM    `YMMNq.      MM        MMmmMM    
-  MM        MM   Y  ,   MM  YM.     MM     ,MP MM  .     `MM      MM        MM   Y  , 
-  MM        MM     ,M   MM   `Mb.   MM    ,dP' MM  Mb     dM      MM        MM     ,M 
-.JMML.    .JMMmmmmMMM .JMML. .JMM..JMMmmmdP' .JMML.P"Ybmmd"     .JMML.    .JMMmmmmMMM 
-_____________________________________________________________________________________
-Presiona la tecla (X) para jugar otra vez, ó presiona cualquier otra tecla para salir\n""").upper()
+                `7MMMMMMq.`7MMMMMYMM  `7MMMMMMMq.  `7MMMMMYb.`7MMF' .MMMMbgd MMP""MM""YMM `7MMMMMYMM  
+                MM   `MM. MM    `7    MM   `MM.   MM    `Yb. MM  ,MI    "Y P'   MM   `7   MM    `7  
+                MM   ,M9  MM   d      MM   ,M9    MM     `Mb MM  `MMb.          MM        MM   d    
+                MMmmdM9   MMmmMM      MMmmdM9     MM      MM MM    `YMMNq.      MM        MMmmMM    
+                MM        MM   Y  ,   MM  YM.     MM     ,MP MM  .     `MM      MM        MM   Y  , 
+                MM        MM     ,M   MM   `Mb.   MM    ,dP' MM  Mb     dM      MM        MM     ,M 
+                .JMML.    .JMMmmmmMMM .JMML. .JMM..JMMmmmdP' .JMML.P"Ybmmd"     .JMML.    .JMMmmmmMMM 
+                _____________________________________________________________________________________
+                Presiona la tecla (X) para jugar otra vez, ó presiona cualquier otra tecla para salir\n""").upper()
                 if lose == "X":
                     lifes = 7
                     chosen_word = random.choice(data)
@@ -181,14 +167,14 @@ Presiona la tecla (X) para jugar otra vez, ó presiona cualquier otra tecla para
         if "_" not in chosen_word_list_underscores:
             os.system("cls") 
             print("""
-   .g8MMMbgd       db      `7MN.   `7MF'    db       .MMMMbgd MMP""MM""YMM `7MMMMMYMM  
-.dP'     `M      ;MM:       MMN.    M      ;MM:     ,MI    "Y P'   MM   `7   MM    `7  
-dM'       `     ,V^MM.      M YMb   M     ,V^MM.    `MMb.          MM        MM   d    
-MM             ,M  `MM      M  `MN. M    ,M  `MM      `YMMNq.      MM        MMmmMM    
-MM.    `7MMF'  AbmmmqMA     M   `MM.M    AbmmmqMA   .     `MM      MM        MM   Y  , 
-`Mb.     MM   A'     VML    M     YMM   A'     VML  Mb     dM      MM        MM     ,M 
-  `"bmmmdPY .AMA.   .AMMA..JML.    YM .AMA.   .AMMA.P"Ybmmd"     .JMML.    .JMMmmmmMMM   
----------------------------------------------------------------------------------------""")                                                                                                             
+                .g8MMMbgd       db      `7MN.   `7MF'    db       .MMMMbgd MMP""MM""YMM `7MMMMMYMM  
+             .dP'     `M      ;MM:       MMN.    M      ;MM:     ,MI    "Y P'   MM   `7   MM    `7  
+             dM'       `     ,V^MM.      M YMb   M     ,V^MM.    `MMb.          MM        MM   d    
+             MM             ,M  `MM      M  `MN. M    ,M  `MM      `YMMNq.      MM        MMmmMM    
+             MM.    `7MMF'  AbmmmqMA     M   `MM.M    AbmmmqMA   .     `MM      MM        MM   Y  , 
+             `Mb.     MM   A'     VML    M     YMM   A'     VML  Mb     dM      MM        MM     ,M 
+               `"bmmmdPY .AMA.   .AMMA..JML.    YM .AMA.   .AMMA.P"Ybmmd"     .JMML.    .JMMmmmmMMM   
+             ---------------------------------------------------------------------------------------""")                                                                                                             
             print("¡Felicitaciones! Lo lograste. La palabra era: ", chosen_word)
             choice = input("Presiona la tecla (X) para jugar otra vez, ó presiona cualquier otra tecla para salir\n").upper()
             if choice == "X":
@@ -226,6 +212,18 @@ MM.    `7MMF'  AbmmmqMA     M   `MM.M    AbmmmqMA   .     `MM      MM        MM 
             lifes -= 1
             if lifes == -1:
                 os.system("cls")
+    while True:
+        try:
+            opcion = input(menu)
+            if int(opcion) == 1:
+                run()   
+            else: input("Debes ingresar el número 1 para jugar. Presiona la tecla Enter para reintentar.")
+            assert len(str(opcion)) == 1, input("¡No puedes ingresar varias letras o números!, Presiona la tecla Enter para reintentar.")
+        except AssertionError as a:
+            print(a) 
+        except ValueError:
+            input("No se aceptan letras, ingresa el número 1 para jugar. Presiona la tecla Enter para reintentar.")   
+                        
 
 if __name__=="__main__":
     run()        
